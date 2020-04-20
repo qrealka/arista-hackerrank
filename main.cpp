@@ -30,6 +30,10 @@ std::string FormatString(std::string S) {
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    using namespace std::string_literals;
+
+    for (const auto& s : {"AA-44 BB 55CD 83FG"s, "00-44 48 5555 8361"s, "0   -   22 1985--324"s, "12"s, "123"s, "1234"s, "12345"s}) {
+        std::cout << "in: " << s << " to: " << FormatString(s) << "\n";
+    }
     return 0;
 }
