@@ -4,7 +4,7 @@
 
 std::string FormatString(std::string S) {
     S.erase(std::remove_if(S.begin(), S.end(), [](auto c){
-        return isspace(c) || c == '-';
+        return c == ' ' || c == '-';
     }), S.end());
 
     auto tailSize = S.size() % 3;
